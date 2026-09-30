@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>translator</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body
+    class="bg-secondary vh-100 d-flex justify-content-center align-items-center"
+  >
+    <div class="main-content bg-black p-4 d-flex flex-column rounded-3 gap-3">
+      <div class="head text-center text-white">
+        <h1>Translator App</h1>
+      </div>
+      <div class="text d-flex gap-3">
+        <textarea
+          name=""
+          id=""
+          cols="20"
+          rows="10"
+          class="bg-secondary rounded border text-from text-light"
+        ></textarea>
+        <textarea
+          name=""
+          id=""
+          cols="20"
+          rows="10"
+          class="bg-dark border rounded text-to text-light"
+          disabled
+        ></textarea>
+      </div>
+      <div class="language justify-content-around d-flex gap-5 w-100">
+        <select
+          name=""
+          id="fromLanguage"
+          class="pe-5 bg-dark text-light rounded p-1"
+        ></select>
+        <select
+          name=""
+          id="toLanguage"
+          class="pe-5 bg-dark text-light rounded p-1"
+        ></select>
+      </div>
+      <div class="button text-center">
+        <button class="btn btn-outline-primary">Transalte</button>
+      </div>
+    </div>
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="module" src="/js/data.js"></script>
+    <script type="module" src="/js/index.js"></script>
+  </body>
+</html>
