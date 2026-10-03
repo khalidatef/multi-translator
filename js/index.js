@@ -4,6 +4,7 @@ const toLanguage = document.querySelector("#toLanguage");
 const btn = document.querySelector(".btn");
 const textFrom = document.querySelector(".text-from");
 const textTo = document.querySelector(".text-to");
+const errorMessage = document.querySelector(".error");
 //
 
 let arrOfCountries = Object.entries(countries)
@@ -27,5 +28,9 @@ btn.addEventListener("click", () => {
     })
     .then((data) => {
       textTo.value = data.responseData.translatedText;
+    })
+    .catch((err) => {
+      console.log(err);
+      errorMessage.innerHTML = `<h1 class="text-danger mt-5 text-center">Can't load Api Please try agin</h1>`;
     });
 });
